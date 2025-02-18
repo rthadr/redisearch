@@ -1,0 +1,9 @@
+services:
+  redis:
+    restart: unless-stopped
+    network_mode: host
+    build: .
+    volumes:
+      - redis:/data
+volumes:
+  redis:
